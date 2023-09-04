@@ -50,7 +50,7 @@ spec:
 
       containers:
         - name: suricata
-          image: jasonish/suricata:6.0.4-amd64
+          image: jasonish/suricata
           env:
             - name: NODE_NAME
               valueFrom:
