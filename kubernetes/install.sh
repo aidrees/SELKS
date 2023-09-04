@@ -44,12 +44,12 @@ kubectl create --save-config -f scirius/scirius-service.yaml
 
 kubectl create --save-config -f arkime/arkime-pv.yaml
 kubectl create --save-config -f arkime/arkime-pvc.yaml
-kubectl create --save-config -f arkime/arkime-secret.yaml
+kubectl create --save-config -f arkime/arkime-secret.yaml -n suricata
 kubectl create --save-config -f arkime/arkime-configmap.yaml
 kubectl create --save-config -f arkime/arkime-deployment.yaml
 
 # For a regular NGINX installation
-kubectl create --save-config -f nginx/nginx-secret.yaml
+kubectl create --save-config -f nginx/nginx-secret.yaml -n suricata
 kubectl create --save-config -f nginx/nginx-configmap.yaml
 kubectl create --save-config -f nginx/nginx-deployment.yaml
 kubectl create --save-config -f nginx/nginx-service.yaml
