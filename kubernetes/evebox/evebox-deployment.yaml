@@ -23,7 +23,7 @@ spec:
         - args:
             - -e
             - http://elasticsearch.logging:9200
-          image: jasonish/evebox:main
+          image: jasonish/evebox
           name: evebox
 
           ports:
