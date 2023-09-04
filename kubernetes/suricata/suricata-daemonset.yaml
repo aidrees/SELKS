@@ -147,9 +147,14 @@ spec:
           type: RuntimeDefault
 
       volumes:
+       # - name: suricata-log
+       #   persistentVolumeClaim:
+       #     claimName: suricata-log
+            
         - name: suricata-log
-          persistentVolumeClaim:
-            claimName: suricata-log
+          hostPath:
+            path: /var/log/suricata
+            type: DirectoryOrCreate
         - name: suricata-run
           persistentVolumeClaim:
             claimName: suricata-run
