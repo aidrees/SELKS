@@ -92,9 +92,9 @@ spec:
             path: /etc/nginx
             type: DirectoryOrCreate
         - name: scirius-static
-          persistentVolumeClaim:
-            claimName: scirius-static
-            readOnly: true
+          hostPath:
+            path: /data/scirius/static/
+            type: DirectoryOrCreate
           
         - name: nginx-tls
           secret:
