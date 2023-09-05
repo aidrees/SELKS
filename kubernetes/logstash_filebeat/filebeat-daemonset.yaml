@@ -33,7 +33,7 @@ spec:
 
       containers:
       - name: filebeat
-        image: "docker.elastic.co/beats/filebeat:7.17.9"
+        image: "docker.elastic.co/beats/filebeat"
         args:
         - "-e"
         - "-E"
