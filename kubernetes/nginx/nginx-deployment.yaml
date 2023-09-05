@@ -81,13 +81,21 @@ spec:
             - mountPath: /etc/nginx/ssl
               name: nginx-tls
               readOnly: true
+            - mountPath: /etc/nginx
+              name: nginx
+              
 
       restartPolicy: Always
       volumes:
+        - name: nginx
+          hostPath:
+            path: /etc/nginx
+            type: DirectoryOrCreate
         - name: scirius-static
           persistentVolumeClaim:
             claimName: scirius-static
             readOnly: true
+          
         - name: nginx-tls
           secret:
             secretName: nginx-tls
