@@ -88,8 +88,9 @@ spec:
             drop:
             - ALL
           privileged: false
-          runAsUser: 10000
-          runAsGroup: 0
+          #runAsUser: 10000
+          #runAsGroup: 0
+          runAsNonRoot: false
 
         volumeMounts:
         - name: filebeat-config
