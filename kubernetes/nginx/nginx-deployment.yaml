@@ -58,7 +58,7 @@ spec:
               drop:
                 - ALL
             privileged: false
-            runAsNonRoot: true
+            runAsNonRoot: false
             seccompProfile:
               type: RuntimeDefault
 
