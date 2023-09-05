@@ -53,11 +53,11 @@ spec:
             failureThreshold: 3
           
           securityContext:
-            allowPrivilegeEscalation: false
+            allowPrivilegeEscalation: true
             capabilities:
               drop:
                 - ALL
-            privileged: false
+            privileged: true
             runAsNonRoot: false
             seccompProfile:
               type: RuntimeDefault
